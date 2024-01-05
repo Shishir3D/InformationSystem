@@ -1,0 +1,37 @@
+a:hover {color:#FFCC00}
+
+.container {
+	width:60%;
+	background-color:white;
+	text-align:center;
+	margin:auto;
+	padding:10px;
+}
+.container2 {
+	width:50%;
+	background-color:white;
+	margin:auto;
+	padding:10px;
+}
+
+.b {
+	border:1px solid;
+}
+
+.bgcolour {
+	background-color:white;
+}
+
+.current {
+	background-color:#33FFBA;
+	height:50px;
+}
+.menu {
+	background-color:white;
+	height:50px;
+}
+
+.text2 {
+		font-family:Comic Sans MS;
+		color:#cc0099;
+}
