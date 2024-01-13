@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JS Demo</title>
+
+		<style type="text/css">
+			.img
+			{
+				width: 200px;
+				height: 200px;
+			}
+
+			.hide
+			{
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="greeting">Hello World!!!</h1>
+
+		<button onclick="change_style_html()">Change Styles</button>
+		<br>
+		<br>
+
+		<p>Number 1: <input type="text" id="n1"></p>
+		<p>Number 2: <input type="text" id="n2"></p>
+		<br>
+		<button onclick="add()">Add Them</button>
+
+		<h1 id="ans">Sum of numbers will appear here</h1>
+		<br>
+
+		<p id="date"></p>
+		<br>
+
+		<img class="img hide" id="1" src="1.png">
+		<img class="img hide" id="2" src="2.png">
+
+		<br>
+		
+		<button onclick="toggle()">Toggle Image</button>
+
+		<script type="text/javascript">
+			function change_style_html()
+			{
+				var element = document.getElementById('greeting');
+				element.innerHTML = "Hello Again World !!";
+				element.style.color = "Blue";
+			}
+
+			function add()
+			{
+				var a = document.getElementById('n1').value;
+				var b = document.getElementById('n2').value;
+
+				var answer = document.getElementById('ans');
+
+				sumOfNumbers = Number(a) + Number(b)
+
+				answer.innerHTML = sumOfNumbers
+				//document.getElementById('ans').innerHTML = Number(a) + Number(b);
+			}
+
+			function display_date() 
+			{
+				document.getElementById('date').innerHTML = Date();
+				setTimeout(display_date,1000)
+			}
+
+			display_date();
+
+			function toggle()
+			{
+				var p1 = document.getElementById('1');
+				var p2 = document.getElementById('2');
+
+				if (p1.style.display == "none") 
+				{
+					p1.style.display = "block";
+					p2.style.display = "none";
+				}
+
+				else
+				{
+					p1.style.display = "none";
+					p2.style.display = "block";
+				}
+			}
+			document.getElementById('1').style.display = "block";
+
+		</script>
+	</body>
+</html>
